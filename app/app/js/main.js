@@ -98,11 +98,24 @@
 
   
 
-      $scope.overlay = function(){
-         $('.overlay').toggleClass('on');
+      $scope.overlay = function(a){
+         if(a == "small"){
+            $('.overlay').addClass('small');
+            $('.overlay').toggleClass('on');
+
+         }
+         else{
+            $('.overlay').removeClass('small');
+             $('.overlay').toggleClass('on');
+          }
       };
 
-        $scope.messageId = 7;
+  
+
+
+
+
+        $scope.messageId = 1;
         $scope.cardTypeId = 0;
         $scope.curPageObj = {};
         $scope.pricingMessages = pricingMessages;
@@ -163,6 +176,22 @@
     //var pricingProcess = new PricingProcess();
 
     $scope.updateMessageId = function(passMessageId, captureValue) {
+
+        var arr_ = pricingMessages[passMessageId];
+            if(typeof arr_ !== "undefined" ){
+            arr_ = arr_.slice(-1)[0].step;
+            arr_ = arr_.replace(/\s+/g, '');
+            arr_ = arr_.replace(/[^\w\s]/gi, '');
+            arr_ = arr_.toLowerCase();
+            
+            console.log(arr_);
+
+            $('.left-nav ul li').removeClass('current');
+            $('.left-nav ul li.'+arr_).addClass('current');
+
+            }
+
+
         if(passMessageId == '0'){
 
           $scope.runLenderSearch();
@@ -208,7 +237,7 @@
       var t;
       t = '<div class="lender-search">';
       // t += '<img src="../img/lender-logos/citi.jpg" />';
-      t += '<h2>You\re approved for 470 loans!</h2>';
+      t += '<h2>You\'re approved for 470 loans!</h2>';
       t += '<p>Find the one you want, then we\'ll connect you with the lender to clse the loan</p>';
       t += '<button id="view-rates">View My Loans</button>';
       t += '</div>';

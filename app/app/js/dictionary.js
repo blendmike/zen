@@ -1,18 +1,31 @@
 var pricingMessages = {
   1: [{
-    text: "one one",
+    text: "How would like to upload pay stub from last employer?",
     type: "message"
   }, {
-    text: "one two",
+    text: "Continue",
+    type: "button",
+    pause: "yes",
+    next: 2
+  },{
+    step : "Paystubs",
+    show : "true"
+
+  }],
+  2: [{
+      text: "Any other pay stubs?  Upload all of your paystubs for the last 2 years…",
+      type: "message"
+  }, {
+    text: "two two",
     type: "message"
   }, {
     text: "Continue",
     type: "button",
     pause: "yes",
     step : "Paystubs",
-    next: 2
+    next: 3
   }],
-  2: [{
+  3: [{
       text: "two one",
     type: "message"
   }, {
@@ -23,9 +36,23 @@ var pricingMessages = {
     type: "button",
     pause: "yes",
     step : "Credit Report",
-    next: 3
+    next: 4
   }],
-  3: [{
+  4: [{
+      text: "two one",
+    type: "message"
+  }, {
+    text: "two two",
+    type: "message"
+  }, {
+    text: "Continue",
+    type: "button",
+    pause: "yes",
+    step : "Credit Report",
+    show : "true",
+    next: 5
+  }],
+  5: [{
     text: "three one.",
     type: "message"
   }, {
@@ -36,10 +63,11 @@ var pricingMessages = {
     type: "button",
     pause: "yes",
     step : "W2s",
-    next: 4
+    show : "true",
+    next: 6
   }],
 
-  4: [{
+  6: [{
     text: "four one.",
     type: "message"
   }, {
@@ -49,37 +77,12 @@ var pricingMessages = {
     text: "Continue",
     type: "button",
     pause: "yes",
+    show : "true",
     step : "Tax Returns",
-    next: 5
-  }],
-
-  5: [{
-    text: "Proin pharetra in felis ut tincidunt. Morbi maximus ante eget arcu consectetur.",
-    type: "message"
-  }, {
-    text: "Proin pharetra in felis ut tincidunt. Morbi maximus ante eget arcu consectetur.",
-    type: "message"
-  }, {
-    text: "Continue",
-    type: "button",
-    pause: "yes",
-    step : "Financial Statements",
-    next: 6
-  }],
-  6: [{
-    text: "Proin pharetra in felis ut tincidunt. Morbi maximus ante eget arcu consectetur.",
-    type: "message"
-  }, {
-    text: "Proin pharetra in felis ut tincidunt. Morbi maximus ante eget arcu consectetur.",
-    type: "message"
-  }, {
-    text: "Continue",
-    type: "button",
-    pause: "yes",
-    step : "Declarations & HMDA",
     next: 7
   }],
-    7: [{
+
+  7: [{
     text: "Proin pharetra in felis ut tincidunt. Morbi maximus ante eget arcu consectetur.",
     type: "message"
   }, {
@@ -89,6 +92,35 @@ var pricingMessages = {
     text: "Continue",
     type: "button",
     pause: "yes",
+    show : "true",
+    step : "Financial Statements",
+    next: 8
+  }],
+  8: [{
+    text: "Proin pharetra in felis ut tincidunt. Morbi maximus ante eget arcu consectetur.",
+    type: "message"
+  }, {
+    text: "Proin pharetra in felis ut tincidunt. Morbi maximus ante eget arcu consectetur.",
+    type: "message"
+  }, {
+    text: "Continue",
+    type: "button",
+    pause: "yes",
+    show : "true",
+    step : "Declarations & HMDA",
+    next: 9
+  }],
+    9: [{
+    text: "Proin pharetra in felis ut tincidunt. Morbi maximus ante eget arcu consectetur.",
+    type: "message"
+  }, {
+    text: "Proin pharetra in felis ut tincidunt. Morbi maximus ante eget arcu consectetur.",
+    type: "message"
+  }, {
+    text: "Continue",
+    type: "button",
+    pause: "yes",
+    show : "true",
     step : "Additional Questions",
     next: 0
   }]

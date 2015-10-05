@@ -1785,6 +1785,11 @@
   margin-left: 5%;
 }
 .left-nav ul li {
+  -webkit-transition: background-color .55s ease;
+  -moz-transition: background-color .55s ease;
+  -ms-transition: background-color .55s ease;
+  -o-transition: background-color .55s ease;
+  transition: background-color .55s ease;
   list-style: none;
   padding: 20px;
   padding-left: 85px;
@@ -1795,6 +1800,9 @@
   color: #5F7882;
   font-size: 16px;
 }
+.left-nav ul li.show {
+  display: block;
+}
 .left-nav ul li.paystubs {
   background: url(../img/icons/paystubs.png) no-repeat 10% center;
 }
@@ -1804,20 +1812,44 @@
 .left-nav ul li.creditreport {
   background: url(../img/icons/credit-report.png) no-repeat 10% center;
 }
+.left-nav ul li.creditreport.current {
+  background: #fff url(../img/icons/active/creditCheck-large.svg) no-repeat 22px center;
+  background-size: 15%;
+}
 .left-nav ul li.w2s {
   background: url(../img/icons/w2.png) no-repeat 10% center;
+}
+.left-nav ul li.w2s.current {
+  background: #fff url(../img/icons/active/w2s-large.svg) no-repeat 20px center;
+  background-size: 15%;
 }
 .left-nav ul li.taxreturns {
   background: url(../img/icons/tax-returns.png) no-repeat 10% center;
 }
+.left-nav ul li.taxreturns.current {
+  background: #fff url(../img/icons/active/taxReturns-large.svg) no-repeat 20px center;
+  background-size: 15%;
+}
 .left-nav ul li.financialstatements {
   background: url(../img/icons/financial-statements.png) no-repeat 10% center;
+}
+.left-nav ul li.financialstatements.current {
+  background: #fff url(../img/icons/active/validateAssets-large.svg) no-repeat 20px center;
+  background-size: 15%;
 }
 .left-nav ul li.declarationshmda {
   background: url(../img/icons/declarations.png) no-repeat 10% center;
 }
+.left-nav ul li.declarationshmda.current {
+  background: #fff url(../img/icons/active/declarations-large.svg) no-repeat 20px center;
+  background-size: 15%;
+}
 .left-nav ul li.additionalquestions {
   background: url(../img/icons/additional-questions.png) no-repeat 10% center;
+}
+.left-nav ul li.additionalquestions.current {
+  background: #fff url(../img/icons/active/additionalQuestions-large.svg) no-repeat 20px center;
+  background-size: 15%;
 }
 .left-nav ul li:last-child {
   border-bottom: none;
@@ -1827,7 +1859,6 @@
   background-color: #fff;
   font-family: "Whitney-Medium", sans-serif;
   color: #5F7882;
-  font-size: 20px;
   border-radius: 4px;
   box-shadow: 0 1px 3px 0 rgba(0, 66, 97, 0.1);
 }
@@ -1851,11 +1882,26 @@
 }
 
 .overlay {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0%;
+}
+.overlay.small .overlay-content {
+  display: none;
+}
+.overlay.small .overlay-content.overlay-small {
+  display: block;
+}
+.overlay.small .overlay-content.overlay-small .modal-container {
+  width: 480px;
+  position: absolute;
+  left: 50%;
+  margin-left: -240px;
+}
+.overlay.small .overlay-content.overlay-small .contact-me {
+  display: block;
 }
 
 .overlay-bg1 {
@@ -2182,11 +2228,11 @@ nav img {
 }
 .lender-search button {
   border: none;
-  background: #3CCAB1;
+  background: #4A90E2;
   color: #fff;
   padding: 20px 60px;
   border-radius: 10px;
-  border: #3CCAB1 1px solid;
+  border: #4A90E2 1px solid;
   margin-right: 20px;
   outline: none;
   font-size: 1.2em;
@@ -2197,7 +2243,7 @@ nav img {
   -moz-transition: all ease 0.5s;
 }
 .lender-search button:hover {
-  color: #3CCAB1;
+  color: #4A90E2;
   background: #fff;
 }
 .lender-search .loading-bar {
@@ -2205,13 +2251,13 @@ nav img {
   height: 40px;
   margin: 0 auto;
   margin-top: 70px;
-  border: 1px solid #3CCAB1;
+  border: 1px solid #4A90E2;
   position: relative;
 }
 .lender-search .loading-bar:before {
   content: '';
   width: 0%;
-  background: #3CCAB1;
+  background: #4A90E2;
   height: 40px;
   top: 0;
   left: 0;
@@ -2485,6 +2531,8 @@ nav img {
   margin-top: 50px;
   position: relative;
   padding: 60px;
+  font-family: "Gotham-Book", sans-serif;
+  margin-bottom: 100px;
 }
 .modal-container article {
   display: none;
@@ -2492,8 +2540,65 @@ nav img {
 .modal-container article.current {
   display: block;
 }
-.modal-container aside ul {
+.modal-container header {
+  text-align: center;
+}
+.modal-container header .col-md-12 .dl-logo {
+  margin-bottom: -30px;
+  margin-left: 60px !important;
+}
+.modal-container article.pre-approval p {
+  margin: 0;
+  padding: 0;
+  line-height: 14px;
+}
+.modal-container article.pre-approval p label {
+  font-weight: normal;
+  width: 200px;
+}
+.modal-container article.contact-me h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 23px;
+  color: #3B4855;
+  font-family: "Whitney-Book", sans-serif;
+}
+.modal-container article.contact-me label {
+  width: 100%;
+}
+.modal-container article.contact-me select {
+  border: #D9D9D9 1px solid;
+  border-radius: 4px;
+  width: 240px;
+  height: 35px;
+  background: #fff;
+  outline: none;
+  margin-bottom: 40px;
+}
+.modal-container article.contact-me select option {
+  padding: 10px;
+}
+.modal-container article.contact-me textarea {
+  border: #D9D9D9 1px solid;
+  border-radius: 4px;
+  width: 340px;
+  clear: both;
+  height: 120px;
+  float: left;
+}
+.modal-container article.contact-me button {
+  float: left;
+  clear: both;
+  background: #4A90E2;
   margin-top: 25px;
+  border: none;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: "Gotham-Book", sans-serif;
+  padding-top: 9px;
+  height: 40px;
 }
 .modal-container aside ul li {
   min-height: 30px;
@@ -2551,6 +2656,7 @@ nav img {
 }
 .modal-container .col-md-9 h3 {
   font-family: "Whitney-Book", sans-serif;
+  margin-top: 0;
 }
 .modal-container .col-md-9 ul {
   width: 100%;
