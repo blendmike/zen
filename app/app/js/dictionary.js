@@ -8,10 +8,10 @@ var pricingMessages = {
   }, {
     text: "Continue",
     type: "button",
-    step : "Getting to Know You",
     pause: "yes",
-    show : "true",
-    next: 2
+    next: 2,
+    step : "Getting to Know You",
+    show : "true"
   }],
   2: [{
       text: "Ask basic questions here to set up the application:",
@@ -21,13 +21,10 @@ var pricingMessages = {
     type: "message"
   }, {
     text: "When will you purchase a home?",
-    type: "message",
-    step : "Getting to Know You"    
-
+    type: "message"
   }, {
     text: "What kind of home are you looking for?",
     type: "message"
-    
   }, {
     text: "etc.",
     type: "message"
@@ -79,34 +76,21 @@ var pricingMessages = {
     show : "true",
     next: 6
   }],
- 
   6: [{
     text: "Pulling your credit...",
     type: "message"
   }, {
-    text: "Continue",
-    type: "button",
-    pause: "yes",
-  
-    next: 7
-  },{
-    step : "Credit Report"
-  }],
- 
-  7: [{
     text: "Alright, we're all done pulling your credit report!",
     type: "message"
   }, {
     text: "Continue",
     type: "button",
     pause: "yes",
-    next: 8
-  },{
     show : "true",
-    step : "Credit Report"
+    step : "Credit Report",
+    next: 7
   }],
- 
-  8: [{
+  7: [{
     text: "Up next, we'll need copies of your W2s for the past two years.",
     type: "message"
   }, {
@@ -118,10 +102,9 @@ var pricingMessages = {
     pause: "yes",
     show : "true",
     step : "W2s",
-    next: 9
+    next: 8
   }],
- 
-    9: [{
+    8: [{
     text: "Alright, we're all done uploading your W2s!",
     type: "message"
   }, {
@@ -130,10 +113,9 @@ var pricingMessages = {
     pause: "yes",
     show : "true",
     step : "W2s",
-    next: 10
+    next: 9
   }],
- 
-    10: [{
+    9: [{
     text: "Up next, we'll need copies of your paystubs for the past two years",
     type: "message"
   }, {
@@ -145,10 +127,9 @@ var pricingMessages = {
     pause: "yes",
     show : "true",
     step : "Paystubs",
-    next: 11
+    next: 10
   }],
- 
-    11: [{
+    10: [{
     text: "Alright, we're all done uploading your paystubs!",
     type: "message"
   }, {
@@ -157,10 +138,9 @@ var pricingMessages = {
     pause: "yes",
     show : "true",
     step : "Paystubs",
-    next: 12
+    next: 11
   }],
- 
-    12: [{
+    11: [{
     text: "Up next, we'll need financial statements for the past 30 days.",
     type: "message"
   }, {
@@ -172,10 +152,9 @@ var pricingMessages = {
     pause: "yes",
     show : "true",
     step : "Financial Statements",
-    next: 13
+    next: 12
   }],
- 
-    13: [{
+    12: [{
     text: "Importing your Bank of America accounts...",
     type: "message"
   }, {
@@ -190,51 +169,6 @@ var pricingMessages = {
     pause: "yes",
     show : "true",
     step : "Financial Statements",
-    next: 14
-  }],
- 
-    14: [{
-    text: "Alright, we're all done uploading your financial statements!",
-    type: "message"
-  }, {
-    text: "Continue",
-    type: "button",
-    pause: "yes",
-    show : "true",
-    step : "Financial Statements",
-    next: 15
-  }],
- 
-    15: [{
-    text: "Almost there - just a few more questions before we can approve you!",
-    type: "message"
-  }, {
-    text: "What is your current monthly rent?",
-    type: "message"
-  }, {
-    text: "What do you pay monthly towards alimony and/or child support?",
-    type: "message"
-  }, {
-    text: "Continue",
-    type: "button",
-    pause: "yes",
-    show : "true",
-    step : "Additional Questions",
-    next: 16
-  }],
- 
-    16: [{
-    text: "Alright, you're all done with your application!",
-    type: "message"
-  }, {
-    text: "Up next, we'll see which loans you qualify for.",
-    type: "message"
-  }, {
-    text: "Continue",
-    type: "button",
-    pause: "yes",
-    show : "true",
-    step : "Additional Questions",
     next: 0
   }]
 }

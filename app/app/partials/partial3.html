@@ -1,4 +1,4 @@
-<div class="col-md-12 zen-app" style="margin-top:65px;display:block;height:100%;background:#FCFEFF;padding:0;">
+<div class="col-md-12 zen-app" ng-init="sizeControl()" style="margin-top:65px;display:block;height:100%;background:#FCFEFF;padding:0;">
 <div class="col-md-3">
         <div class="left-nav">
              <div class="est-completion">
@@ -22,7 +22,7 @@
 
 
 </div>
-<div class="col-md-6" style="height:1000px;background:#fff;padding:50px;">
+<div class="col-md-6" style="background:#fff;padding:50px;height:100%;">
  <span ng-repeat="pricingMessage in getValues(messageId)" class="{{pricingMessage.type}}-content slide-content {{pricingMessage.pause}}" ng-class="{'active': $first}" run-presentation>
         <img width="60px" class="msg-loader" src="https://blend-borrower.blendlabs.com/assets/images/app-loader.gif" />  
        <span ng-if="pricingMessage.type == 'message'">{{pricingMessage.text}}</span>
@@ -146,18 +146,20 @@
 
     <ul class="filter-mortgages">
             <h3>Your recommendations:</h3>
-     <li ng-repeat="appMortgages in appMortgage">
-                <img src="../img/lender-logos/{{appMortgages.lender}}.jpg" />
+
+     <li ng-repeat="mortgagePushs in loanFilter(messageId)">
+                <img src="../img/lender-logos/{{mortgagePushs.lender}}.jpg" />
                 <p>
-                    <label><span style="width:{{appMortgages.match}}%;"></span></label>
-                    <span>{{appMortgages.match}}% match</span>
+                    <label><span style="width:{{mortgagePushs.match}}%;"></span></label>
+                    <span>{{mortgagePushs.match}}% match</span>
                 </p>
-                <span class="apr">{{appMortgages.apr}}% APR</span>
-                <span class="mo-pay">${{appMortgages.mopayments}}/mo</span>
-                <span class="mo-type">{{appMortgages.type}}</span>
-                <span class="mo-fees">${{appMortgages.fees}} in fees</span>
+                <span class="apr">{{mortgagePushs.apr}}% APR</span>
+                <span class="mo-pay">${{mortgagePushs.mopayments}}/mo</span>
+                <span class="mo-type">{{mortgagePushs.type}}</span>
+                <span class="mo-fees">${{mortgagePushs.fees}} in fees</span>
              
                 </li>
+
                 <div class="grad-overlay"></div>
     </ul>
 <!--          <div class="best-mortgages"></div> -->

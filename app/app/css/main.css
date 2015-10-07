@@ -819,6 +819,7 @@
   margin-top: 5px;
   float: left;
   width: 100%;
+  display: block !important;
 }
 .application-start .slide-content.button-content .button-wrap {
   float: left;
@@ -1652,11 +1653,14 @@
   margin-top: 5px;
   float: left;
   width: 100%;
+  display: block !important;
+  position: absolute;
+  bottom: 40px;
 }
 
 .slide-content.button-content .button-wrap {
   float: left;
-  width: 100%;
+  width: 85%;
   border-top: 1px solid rgba(206, 218, 224, 0.4);
   padding-top: 20px;
 }
@@ -2225,12 +2229,13 @@ nav img {
   width: 562px;
 }
 .lender-search h2 {
-  width: 70%;
-  margin: 0 auto;
+  width: 100%;
   text-align: center;
-  font-family: "Whitney-Book", sans-serif;
-  font-weight: 400;
-  line-height: 1.5em;
+  font-family: "Whitney-Medium", sans-serif;
+  font-size: 36px;
+  color: #09463B;
+  margin-bottom: 60px;
+  margin-top: 60px;
 }
 .lender-search p {
   font-size: 1.2em;
@@ -2873,7 +2878,7 @@ nav img {
 }
 .zen-app .col-md-3 {
   background: #FCFEFF;
-  height: 820px;
+  height: 100%;
 }
 .zen-app .col-md-3 .questions {
   background: url(../img/questions-bg.png) no-repeat right center;
@@ -2933,7 +2938,7 @@ nav img {
 }
 .zen-app .col-md-3:last-child {
   border-left: rgba(206, 218, 224, 0.4) 1px solid;
-  height: 700px;
+  height: 100%;
   margin-top: 50px;
 }
 .zen-app .col-md-3:last-child label {
@@ -2962,7 +2967,6 @@ nav img {
 }
 
 body {
-  overflow: hidden;
   margin: 0;
   padding: 0;
 }
@@ -3370,7 +3374,7 @@ header .background-cover .intro-text .intro-heading .heading-font {
     font-size: 14px;
   }
   header .intro-text .intro-lead-in {
-    font-size: 80px;
+    font-size: 62px;
     margin-top: 0;
     font-weight: bold;
     padding-top: 0;
@@ -3416,7 +3420,7 @@ header .background-cover .intro-text .intro-heading .heading-font {
     margin-left: 10px;
   }
   header .intro-text .intro-heading {
-    font-size: 37px;
+    font-size: 32px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     color: #fff;
     width: 75%;

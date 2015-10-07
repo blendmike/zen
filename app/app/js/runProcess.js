@@ -38,8 +38,10 @@ function runProcess() {
         }
       }
     }
+      
+      //$( ".button-content" ).wrapAll( "<div class='buttons' />");  
+
     
-    $( ".button-content" ).wrapAll( "<div class='buttons' />");
 
     if($('.pricing-options').length){
       $(".pricing-wrap").addClass('show');

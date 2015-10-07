@@ -51,6 +51,8 @@
           </ul>
 
           <ul class="rates-results col-md-12">
+                              <img class="tool-tip" src="../img/tooltip.png" />
+
           <li ng-repeat="appMortgages in appMortgage" class="col-md-12">
                
 
@@ -58,15 +60,19 @@
                   <img src="img/lender-logos/{{appMortgages.lender}}.jpg" />
                 
               </div>
-              <div class="col-md-5 mid">
+              <div class="col-md-7 mid">
+
                 <p>
                    <label><span style="width:{{appMortgages.match}}%;"></span></label>
-                    <span class="match">{{appMortgages.match}}% match</span>
+                    <span class="match" ng-mouseover="showTooltip($event);" ng-mouseleave="hideTooltip();">{{appMortgages.match}}% match</span>
                 </p>
                  <span class="apr">{{appMortgages.apr}}% APR</span>
                 <span class="mo-pay">${{appMortgages.mopayments}}/mo</span>
-                <span class="mo-type">{{appMortgages.type}}</span>
-                <span class="mo-fees">${{appMortgages.fees}} in fees</span>
+                <p>
+                  <span class="mo-type">{{appMortgages.type}}</span>
+                  <span class="mo-rate">{{appMortgages.rate}}% Rate</span>
+                  <span class="mo-fees">${{appMortgages.fees}} in fees</span>
+                </p>
               </div>
               <div class="col-md-3 right">
                 <button class="view-rate" ng-click="overlay();">View</button>
@@ -74,113 +80,9 @@
               </div>
              
                 </li>
-            <li class="col-md-12">
 
-              <div class="col-md-4 left">
-                <p>
-                  <img src="img/lender-logos/citi.jpg" />
-                </p>
-                <img src="img/rating.jpg" class="ratings" />
-                <span class="reviews">369 Reviews</span>
-                <span class="bank-name">Citi Bank</span>
-                <span class="nmls">NMLS#412915</span>
-              </div>
-              <div class="col-md-5 mid">
-                <span class="rate-type">30 year fixed</span>
-                <span class="apr">4.068% APR</span>
-                <span class="mor-data">3.875% Rate • $1,129/mo • $1,924 in fees</span>
-              </div>
-              <div class="col-md-3 right">
-                <button class="view-rate" ng-click="overlay();">View</button>
-                <a href="javascript:void(0)" class="ctl" ng-click="overlay('small');">Close this loan</a>
-              </div>
-
-            </li>
-             <li class="col-md-12">
-              <div class="col-md-4 left">
-                <p>
-                  <img src="img/lender-logos/citi.jpg" />
-                </p>
-                <img src="img/rating.jpg" class="ratings" />
-                <span class="reviews">369 Reviews</span>
-                <span class="bank-name">Citi Bank</span>
-                <span class="nmls">NMLS#412915</span>
-              </div>
-              <div class="col-md-5 mid">
-                <span class="rate-type">30 year fixed</span>
-                <span class="apr">4.068% APR</span>
-                <span class="mor-data">3.875% Rate • $1,129/mo • $1,924 in fees</span>
-              </div>
-              <div class="col-md-3 right">
-                <button class="view-rate" ng-click="overlay();">View</button>
-                <a href="javascript:void(0)" class="ctl" ng-click="overlay('small');">Close this loan</a>
-              </div>
-
-            </li>
-             <li class="col-md-12">
-              <div class="col-md-4 left">
-                <p>
-                  <img src="img/lender-logos/citi.jpg" />
-                </p>
-                <img src="img/rating.jpg" class="ratings" />
-                <span class="reviews">369 Reviews</span>
-                <span class="bank-name">Citi Bank</span>
-                <span class="nmls">NMLS#412915</span>
-              </div>
-              <div class="col-md-5 mid">
-                <span class="rate-type">30 year fixed</span>
-                <span class="apr">4.068% APR</span>
-                <span class="mor-data">3.875% Rate • $1,129/mo • $1,924 in fees</span>
-              </div>
-              <div class="col-md-3 right">
-                <button class="view-rate" ng-click="overlay();">View</button>
-                <a href="javascript:void(0)" class="ctl" ng-click="overlay('small');">Close this loan</a>
-              </div>
-
-            </li>
-             <li class="col-md-12">
-              <div class="col-md-4 left">
-                <p>
-                  <img src="img/lender-logos/citi.jpg" />
-                </p>
-                <img src="img/rating.jpg" class="ratings" />
-                <span class="reviews">369 Reviews</span>
-                <span class="bank-name">Citi Bank</span>
-                <span class="nmls">NMLS#412915</span>
-              </div>
-              <div class="col-md-5 mid">
-                <span class="rate-type">30 year fixed</span>
-                <span class="apr">4.068% APR</span>
-                <span class="mor-data">3.875% Rate • $1,129/mo • $1,924 in fees</span>
-              </div>
-              <div class="col-md-3 right">
-                <button class="view-rate" ng-click="overlay();">View</button>
-                <a href="javascript:void(0)" class="ctl" ng-click="overlay('small');">Close this loan</a>
-              </div>
-
-            </li>
-             <li class="col-md-12">
-              <div class="col-md-4 left">
-                <p>
-                  <img src="img/lender-logos/citi.jpg" />
-                </p>
-                <img src="img/rating.jpg" class="ratings" />
-                <span class="reviews">369 Reviews</span>
-                <span class="bank-name">Citi Bank</span>
-                <span class="nmls">NMLS#412915</span>
-              </div>
-              <div class="col-md-5 mid">
-                <span class="rate-type">30 year fixed</span>
-                <span class="apr">4.068% APR</span>
-                <span class="mor-data">3.875% Rate • $1,129/mo • $1,924 in fees</span>
-              </div>
-              <div class="col-md-3 right">
-                <button class="view-rate" ng-click="overlay();">View</button>
-                <a href="javascript:void(0)" class="ctl" ng-click="overlay('small');">Close this loan</a>
-              </div>
-
-            </li>
-
+              </ul>
+            
     </div>
 
 </div>

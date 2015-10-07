@@ -120,8 +120,17 @@
         });
       };
 
-  
 
+      
+
+       $scope.loanFilter = function(id) {
+          return appMortgage[id].relatedLoan;
+       }
+
+
+
+
+  
       $scope.overlay = function(a){
          if(a == "small"){
             $('.overlay').addClass('small');
@@ -134,19 +143,42 @@
           }
       };
 
+
+
+
   
+        $scope.sizeControl = function (){
+          $('.zen-app').height($(window).height() - 65);
+        }
+
+        $scope.runTooltip = function(){
+          $('body').on('mouseenter', '.match', function(){
+
+                $('.tool-tip').css({
+                  top : $(this).offset().top - $('.tool-tip').height(),
+                  left : $(this).offset().left - $('.tool-tip').width() / 2 + 20
+                })
+
+                setTimeout(function(){
+                   $('.tool-tip').addClass('on');
+                },500)      
+          })
+
+                    $('body').on('mouseleave', '.match', function(){
+                   $('.tool-tip').removeClass('on');
+          })
+
+        }
 
 
 
-
-        $scope.messageId = 2;
+        $scope.messageId = 1;
         $scope.cardTypeId = 0;
         $scope.curPageObj = {};
         $scope.pricingMessages = pricingMessages;
         $scope.appMortgage = appMortgage;
         $scope.storeCurPriceCard = [];
         var hKey;
-
 
 
 
