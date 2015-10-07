@@ -430,5 +430,41 @@ var appMortgage = [
         fees : "0",
         match: "55"
     }]
+  },
+ {
+    mid : "13",
+    apr: "3.990",
+    type: "30yr VA Fixed Rate",
+    rate : "4.075",
+    mopayments : "3,578",
+    lender : "citi",
+    phone : "(888) 882-9818",
+    eligible : "595,000",
+    fees : "5,920",
+    match: "85",
+    visibility: "hidden",
+    relatedLoan : [{
+        mid : "3",
+        apr: "3.990",
+        type: "30yr VA Fixed Rate",
+        rate : "4.075",
+        mopayments : "3,578",
+        lender : "citi",
+        phone : "(888) 882-9818",
+        eligible : "595,000",
+        fees : "5,920",
+        match: "85"
+    },{
+        mid : "3",
+        apr: "4.150",
+        type: "30yr VA Fixed Rate",
+        rate : "4.200",
+        mopayments : "3,715",
+        lender : "citi",
+        phone : "(888) 882-9818",
+        eligible : "595,000",
+        fees : "0",
+        match: "55"
+    }]
   }
 ]
