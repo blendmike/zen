@@ -144,14 +144,15 @@
     </ul>
 
 
-    <ul class="filter-mortgages">
-            <h3>Your recommendations:</h3>
+    <ul class="filter-mortgages" ng-init="runTooltip();">
+            <h3>Your recommendations </br> based on borrowers like you:</h3>
+                              <img class="tool-tip" src="../img/tooltip.png" />
 
      <li ng-repeat="mortgagePushs in loanFilter(messageId)">
                 <img src="../img/lender-logos/{{mortgagePushs.lender}}.jpg" />
                 <p>
-                    <label><span style="width:{{mortgagePushs.match}}%;"></span></label>
-                    <span>{{mortgagePushs.match}}% match</span>
+                    <label><span ng-class="mortgagePushs.match >= 65 ? 'green' : ( mortgagePushs.match >= 35 ? 'orange' : 'red')" style="width:{{mortgagePushs.match}}%;"></span></label>
+                    <span class="match">{{mortgagePushs.match}}% match</span>
                 </p>
                 <span class="apr">{{mortgagePushs.apr}}% APR</span>
                 <span class="mo-pay">${{mortgagePushs.mopayments}}/mo</span>
@@ -160,8 +161,8 @@
              
                 </li>
 
-                <div class="grad-overlay"></div>
-    </ul>
+<!--                 <div class="grad-overlay"></div>
+ -->    </ul>
 <!--          <div class="best-mortgages"></div> -->
     </div>
 </div>

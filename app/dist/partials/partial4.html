@@ -50,7 +50,7 @@
             <li><a href="#">Filter</a></li>
           </ul>
 
-          <ul class="rates-results col-md-12">
+          <ul class="rates-results col-md-12" ng-init="runTooltip()">
                               <img class="tool-tip" src="../img/tooltip.png" />
 
           <li ng-repeat="appMortgages in appMortgage" class="col-md-12">
@@ -64,7 +64,7 @@
 
                 <p>
                    <label><span style="width:{{appMortgages.match}}%;"></span></label>
-                    <span class="match" ng-mouseover="showTooltip($event);" ng-mouseleave="hideTooltip();">{{appMortgages.match}}% match</span>
+                    <span class="match">{{appMortgages.match}}% match</span>
                 </p>
                  <span class="apr">{{appMortgages.apr}}% APR</span>
                 <span class="mo-pay">${{appMortgages.mopayments}}/mo</span>

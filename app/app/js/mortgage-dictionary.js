@@ -9,7 +9,7 @@ var appMortgage = [
     phone : "(888) 882-9818",
     eligible : "795,400",
     fees : "6,310",
-    match: "65",
+    match: "20",
     relatedLoan : [{
         mid : "4",
         apr: "4.098",
@@ -20,7 +20,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     },{
         mid : "4",
         apr: "4.098",
@@ -31,7 +31,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     }]
   },
   {
@@ -44,7 +44,7 @@ var appMortgage = [
     phone : "(888) 882-9818",
     eligible : "595,400",
     fees : "6,310",
-    match: "65",
+    match: "20",
     relatedLoan : [{
         mid : "4",
         apr: "4.098",
@@ -55,7 +55,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     },{
         mid : "4",
         apr: "4.098",
@@ -66,7 +66,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     }]
   },
  {
@@ -79,7 +79,7 @@ var appMortgage = [
     phone : "(888) 882-9818",
     eligible : "495,400",
     fees : "6,310",
-    match: "65",
+    match: "20",
     relatedLoan : [{
         mid : "4",
         apr: "1.098",
@@ -90,7 +90,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     },{
         mid : "4",
         apr: "2.098",
@@ -101,7 +101,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     }]
 
   },
@@ -115,7 +115,7 @@ var appMortgage = [
     phone : "(888) 882-9818",
     eligible : "795,400",
     fees : "6,310",
-    match: "65",
+    match: "20",
     relatedLoan : [{
         mid : "4",
         apr: "3.098",
@@ -126,7 +126,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     },{
         mid : "4",
         apr: "4.098",
@@ -137,7 +137,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     }]
   },
   {
@@ -150,7 +150,7 @@ var appMortgage = [
     phone : "(888) 882-9818",
     eligible : "595,400",
     fees : "6,310",
-    match: "65",
+    match: "20",
     relatedLoan : [{
         mid : "4",
         apr: "5.098",
@@ -161,7 +161,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     },{
         mid : "4",
         apr: "6.098",
@@ -172,7 +172,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     }]
   },
   {
@@ -185,7 +185,7 @@ var appMortgage = [
     phone : "(888) 882-9818",
     eligible : "595,400",   
     fees : "6,310",
-    match: "65",
+    match: "20",
     relatedLoan : [{
         mid : "4",
         apr: "7.098",
@@ -196,7 +196,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     },{
         mid : "4",
         apr: "8.098",
@@ -207,7 +207,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     }]
   },
  {
@@ -220,7 +220,7 @@ var appMortgage = [
     phone : "(888) 882-9818",
     eligible : "495,400",
     fees : "6,310",
-    match: "65",
+    match: "20",
     relatedLoan : [{
         mid : "4",
         apr: "9.098",
@@ -231,7 +231,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     },{
         mid : "4",
         apr: "10.098",
@@ -242,7 +242,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     }]
 
   },
@@ -256,7 +256,7 @@ var appMortgage = [
     eligible : "595,400",
     phone : "(888) 882-9818",
     fees : "6,310",
-    match: "65",
+    match: "20",
     relatedLoan : [{
         mid : "4",
         apr: "4.098",
@@ -267,7 +267,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     },{
         mid : "4",
         apr: "4.098",
@@ -278,7 +278,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     }]
   },
   {
@@ -291,7 +291,7 @@ var appMortgage = [
     phone : "(888) 882-9818",
     fees : "6,310",
     eligible : "595,400",
-    match: "65",
+    match: "20",
     relatedLoan : [{
         mid : "4",
         apr: "4.098",
@@ -302,7 +302,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     },{
         mid : "4",
         apr: "4.098",
@@ -313,7 +313,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "40"   
     }]
   },
   {
@@ -326,7 +326,7 @@ var appMortgage = [
     phone : "(888) 882-9818",
     eligible : "595,400",
     fees : "6,310",
-    match: "65",
+    match: "20",
     relatedLoan : [{
         mid : "4",
         apr: "4.098",
@@ -337,7 +337,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "30"   
     },{
         mid : "4",
         apr: "4.098",
@@ -348,7 +348,7 @@ var appMortgage = [
         phone : "(888) 882-9818",
         eligible : "795,400",
         fees : "6,310",
-        match: "65"   
+        match: "20"   
     }]
   },
 ]

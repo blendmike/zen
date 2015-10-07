@@ -2785,6 +2785,25 @@ nav img {
   bottom: 0;
   overflow-y: scroll;
 }
+.zen-app .filter-mortgages .tool-tip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  z-index: 99999;
+  opacity: 0;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  cursor: pointer;
+  border: none;
+  z-index: -1;
+}
+.zen-app .filter-mortgages .tool-tip.on {
+  opacity: 1;
+  z-index: 999999;
+}
 .zen-app .filter-mortgages .grad-overlay {
   background: rgba(255, 255, 255, 0);
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.84) 52%, rgba(255, 255, 255, 0.86) 53%);
@@ -2829,10 +2848,18 @@ nav img {
 }
 .zen-app .filter-mortgages p label span {
   height: 10px;
-  background: #34BF39;
   border-radius: 3px 0 0 3px;
   border-bottom: none;
   margin-left: 0;
+}
+.zen-app .filter-mortgages p label span.green {
+  background: #34BF39;
+}
+.zen-app .filter-mortgages p label span.orange {
+  background: #bf8c34;
+}
+.zen-app .filter-mortgages p label span.red {
+  background: #bf5134;
 }
 .zen-app .filter-mortgages li {
   list-style: none;
