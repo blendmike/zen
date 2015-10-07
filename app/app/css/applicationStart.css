@@ -1387,6 +1387,14 @@
   margin-right: 0;
   font-size: 14px;
   font-family: "Gotham-Book", sans-serif;
+  -webkit-transition: background-color .55s ease;
+  -moz-transition: background-color .55s ease;
+  -ms-transition: background-color .55s ease;
+  -o-transition: background-color .55s ease;
+  transition: background-color .55s ease;
+}
+.slide-content.button-content .button-wrap .continue:hover {
+  background: #3473bd;
 }
 
 .slide-content.button-content .button-wrap .back {
@@ -1612,6 +1620,9 @@
   top: 0;
   left: 0%;
 }
+.overlay .overlay-small {
+  display: none;
+}
 .overlay.small .overlay-content {
   display: none;
 }
@@ -1735,6 +1746,7 @@
   -ms-transition: all .25s ease-in;
   -o-transition: all .25s ease-in;
   transition: all .25s ease-in;
+  overflow-y: scroll;
 }
 
 .overlay-contentscale.on {
@@ -2223,6 +2235,15 @@ nav img {
   border-bottom: none;
   margin-left: 0;
 }
+.cur-mor-rates .rates-results li div.mid label span.green {
+  background: #27CD2C;
+}
+.cur-mor-rates .rates-results li div.mid label span.orange {
+  background: #88C858;
+}
+.cur-mor-rates .rates-results li div.mid label span.red {
+  background: #B8D447;
+}
 .cur-mor-rates .rates-results li div.mid label span {
   float: left;
 }
@@ -2292,9 +2313,14 @@ nav img {
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
   cursor: pointer;
+  z-index: -1;
+  width: 260px;
+  height: 200px;
+  background-size: 100%;
 }
 .cur-mor-rates .rates-results .tool-tip.on {
   opacity: 1;
+  z-index: 989999;
 }
 .cur-mor-rates .rates-results button {
   border: none;
@@ -2512,6 +2538,9 @@ nav img {
   cursor: pointer;
   border: none;
   z-index: -1;
+  width: 260px;
+  height: 200px;
+  background-size: 100%;
 }
 .zen-app .filter-mortgages .tool-tip.on {
   opacity: 1;
@@ -2566,13 +2595,13 @@ nav img {
   margin-left: 0;
 }
 .zen-app .filter-mortgages p label span.green {
-  background: #34BF39;
+  background: #27CD2C;
 }
 .zen-app .filter-mortgages p label span.orange {
-  background: #bf8c34;
+  background: #88C858;
 }
 .zen-app .filter-mortgages p label span.red {
-  background: #bf5134;
+  background: #B8D447;
 }
 .zen-app .filter-mortgages li {
   list-style: none;
@@ -2679,7 +2708,6 @@ nav img {
 .zen-app .col-md-3:last-child {
   border-left: rgba(206, 218, 224, 0.4) 1px solid;
   height: 100%;
-  margin-top: 50px;
 }
 .zen-app .col-md-3:last-child label {
   color: #5F7882;

@@ -170,7 +170,7 @@
           })
 
                     $('body').on('mouseleave', '.match', function(){
-                    $('.tool-tip').removeClass('on');
+                   
           })
 
           $( window).scroll(function() {
@@ -191,7 +191,6 @@
         $scope.curPageObj = {};
         $scope.pricingMessages = pricingMessages;
         $scope.appMortgage = appMortgage;
-        $scope.finalRates = finalRates;
         $scope.storeCurPriceCard = [];
         var hKey;
 

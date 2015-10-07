@@ -60,6 +60,7 @@ body.lender {
 }
 
 
+
 .scrollbar
 {
   float: left;
@@ -1509,6 +1510,15 @@ body {
     margin-right:0;
     font-size:14px;
     font-family: $gotham;
+    -webkit-transition: background-color .55s ease;
+    -moz-transition: background-color .55s ease;
+    -ms-transition: background-color .55s ease;
+    -o-transition: background-color .55s ease;
+    transition: background-color .55s ease;
+    &:hover{
+      background:#3473bd;
+    }
+
 }
 
 .slide-content.button-content .button-wrap  .back{
@@ -1736,6 +1746,9 @@ body {
         height: 100%;
         top: 0;
         left: 0%;
+        .overlay-small{
+          display: none;
+        }
         &.small{
           .overlay-content{
             display: none;
@@ -1854,6 +1867,7 @@ body {
         -ms-transition: all .25s ease-in;
         -o-transition: all .25s ease-in;
         transition: all .25s ease-in;
+        overflow-y: scroll;
     }
     .overlay-contentscale.on {
         opacity: 1;
@@ -2341,6 +2355,15 @@ body {
           border-radius:3px 0 0 3px;
           border-bottom:none;
           margin-left:0;
+          &.green{
+            background:#27CD2C;
+          }
+          &.orange{
+            background:#88C858;
+          }
+          &.red{
+            background:#B8D447;
+          }
         }
         span{
           float:left;
@@ -2422,10 +2445,15 @@ body {
           -webkit-transition: all ease 0.5s;
           -moz-transition: all ease 0.5s;
           cursor: pointer;
+          z-index:-1;
+          width:260px;
+          height:200px;
+          background-size:100%;
       }
 
       .tool-tip.on{
         opacity: 1;
+        z-index:989999;
       }
 
     button{
@@ -2663,6 +2691,9 @@ body {
           cursor: pointer;
           border:none;
           z-index:-1;
+           width:260px;
+          height:200px;
+          background-size:100%;
       }
 
       .tool-tip.on{
@@ -2721,13 +2752,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
           border-bottom:none;
           margin-left:0;
           &.green{
-            background:#34BF39;
+            background:#27CD2C;
           }
           &.orange{
-            background:#bf8c34;
+            background:#88C858;
           }
           &.red{
-            background:#bf5134;
+            background:#B8D447;
           }
         }
       }
@@ -2844,7 +2875,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     &:last-child{
       border-left:rgba(206, 218, 224, .4) 1px solid;
       height:100%;
-      margin-top:50px;
       label{
         color:#5F7882;
         font-family: $gotham;

@@ -7,6 +7,7 @@
 body {
   margin:0;
   padding:0;
+  overflow:hidden;
 }
 
 .container{
@@ -25,6 +26,13 @@ body {
 
 .text-primary {
   color: $brand-primary;
+}
+
+
+.emblem-start{
+  .inner-container{
+    background:#000;
+  }
 }
 
 #services{
@@ -438,10 +446,9 @@ header {
     .intro-text {
       // background:rgba(255, 255, 255, .94);
       padding:30px 30px;
-      margin-top:150px;
+      margin-top:80px;
       height:auto;
       text-align: center;
-      margin-bottom:150px;
       float:left;
       margin-left:-15px;
       border-radius: 1px;

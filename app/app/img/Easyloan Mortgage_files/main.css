@@ -345,6 +345,9 @@
   width: 20%;
   left: 10%;
 }
+.application-start .emblem-start {
+  display: none;
+}
 .application-start .scrollbar {
   float: left;
   height: 300px;
@@ -1907,9 +1910,6 @@
   top: 0;
   left: 0%;
 }
-.overlay .overlay-small {
-  display: none;
-}
 .overlay.small .overlay-content {
   display: none;
 }
@@ -2033,7 +2033,6 @@
   -ms-transition: all .25s ease-in;
   -o-transition: all .25s ease-in;
   transition: all .25s ease-in;
-  overflow-y: scroll;
 }
 
 .overlay-contentscale.on {
@@ -2523,13 +2522,13 @@ nav img {
   margin-left: 0;
 }
 .cur-mor-rates .rates-results li div.mid label span.green {
-  background: #27CD2C;
+  background: #34BF39;
 }
 .cur-mor-rates .rates-results li div.mid label span.orange {
-  background: #88C858;
+  background: #bf8c34;
 }
 .cur-mor-rates .rates-results li div.mid label span.red {
-  background: #B8D447;
+  background: #bf5134;
 }
 .cur-mor-rates .rates-results li div.mid label span {
   float: left;
@@ -2882,13 +2881,13 @@ nav img {
   margin-left: 0;
 }
 .zen-app .filter-mortgages p label span.green {
-  background: #27CD2C;
+  background: #34BF39;
 }
 .zen-app .filter-mortgages p label span.orange {
-  background: #88C858;
+  background: #bf8c34;
 }
 .zen-app .filter-mortgages p label span.red {
-  background: #B8D447;
+  background: #bf5134;
 }
 .zen-app .filter-mortgages li {
   list-style: none;
@@ -2995,6 +2994,7 @@ nav img {
 .zen-app .col-md-3:last-child {
   border-left: rgba(206, 218, 224, 0.4) 1px solid;
   height: 100%;
+  margin-top: 50px;
 }
 .zen-app .col-md-3:last-child label {
   color: #5F7882;
