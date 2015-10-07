@@ -5,7 +5,7 @@
 // Global Components
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   margin:0;
   padding:0;
 }
@@ -64,7 +64,7 @@ body {
       background:url(../img/service-calculate.png) no-repeat 45px center;
   }
   &.compare{
-      background:url(../img/service-compare.png) no-repeat 45px center;
+      background:url(../img/keys.svg) no-repeat 45px center;
   }
     text-align: left;
     padding:0 !important;
@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
       background-size:50px 40px;
       background-position: 30px center;
     }
-    width: 160px;
+    width: 190px;
     height:65px;
     padding:0;
     background: url(../img/logo.png) no-repeat center center;
@@ -196,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
     position:absolute;
     left:50%;
     margin:0 auto;
-    margin-left:-95px !important;
+    margin-left:-100px !important;
     top:0;
     display: block;
     &.app-mode{
@@ -431,11 +431,11 @@ header {
       left:0;
       width:100%;
       height:100%;
-      background:rgba(0,0,0,.4);
+      background:rgba(0,0,0,.3);
     }
     background:url(../img/header-bg.png);
     background-size:130%;
-    background-position: center -250px;
+    background-position: center -340px;
     .intro-text {
       // background:rgba(255, 255, 255, .94);
       padding:30px 30px;
@@ -499,8 +499,9 @@ header {
         -webkit-transition: all ease 0.5s;
         -moz-transition: all ease 0.5s;
         &:hover{
-          color:$brand-primary;
-          background:#fff;
+          background:#3473bd;
+          border:#3473bd 1px solid;
+
        
         }
       }

@@ -119,7 +119,7 @@
 
     </span>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 reco-cont">
     <style>
         .app-mortgages li{
             display: none;
@@ -129,7 +129,7 @@
      <li ng-repeat="appMortgages in appMortgage" ng-class="{show: $index==messageId}">
                 <p>
                 <label>Eligible for up to</label>
-                <span>{{appMortgages.eligible}}</span>
+                <span>${{appMortgages.eligible}}</span>
                 </p>
                 <p>
                 <label>Payments as low as</label>
@@ -141,6 +141,24 @@
                 </p>
              
                 </li>
+    </ul>
+
+
+    <ul class="filter-mortgages">
+            <h3>Your recommendations:</h3>
+     <li ng-repeat="appMortgages in appMortgage">
+                <img src="../img/lender-logos/{{appMortgages.lender}}.jpg" />
+                <p>
+                    <label><span style="width:{{appMortgages.match}}%;"></span></label>
+                    <span>{{appMortgages.match}}% match</span>
+                </p>
+                <span class="apr">{{appMortgages.apr}}% APR</span>
+                <span class="mo-pay">${{appMortgages.mopayments}}/mo</span>
+                <span class="mo-type">{{appMortgages.type}}</span>
+                <span class="mo-fees">${{appMortgages.fees}} in fees</span>
+             
+                </li>
+                <div class="grad-overlay"></div>
     </ul>
 <!--          <div class="best-mortgages"></div> -->
     </div>

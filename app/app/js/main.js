@@ -90,6 +90,30 @@
        $location.path('/apply');
       };
 
+      $scope.showTooltip = function($event){
+        var top_ = $event.target.getBoundingClientRect().top;
+        var left_ = $event.target.getBoundingClientRect().left;
+        console.log(top_ - $('.tool-tip').height());
+        console.log(left_);
+        $('.tool-tip').css({
+          top: top_ - $('.tool-tip').height(),
+          left: left_ - ($('.tool-tip').width() / 2 - 25)
+
+        })
+
+
+                setTimeout(function(){
+                   $('.tool-tip').addClass('on');
+                },500)       
+
+
+
+            };
+
+      $scope.hideTooltip = function(){
+        $('.tool-tip').removeClass('on');
+      }
+
       $scope.yourRates = function(){
         $scope.$apply(function() {
             $location.path('/your-rates');
@@ -115,7 +139,7 @@
 
 
 
-        $scope.messageId = 1;
+        $scope.messageId = 2;
         $scope.cardTypeId = 0;
         $scope.curPageObj = {};
         $scope.pricingMessages = pricingMessages;
@@ -199,6 +223,10 @@
         else{
           $scope.messageId = passMessageId;
         }
+               if(passMessageId == '3'){
+
+          $('.reco-cont').addClass('on');
+        }
         $('.mort-'+passMessageId).fadeOut(599);
 //        pricingProcess.save(captureValue).then(function(object) {
             // /console.log(pricingProcess);
@@ -207,11 +235,12 @@
     };
 
     $scope.runLenderSearch = function(){
+      $('.reco-cont').remove();
       var cont = $('.col-md-6');
       cont.empty();
       var t;
       t = '<div class="lender-search">';
-      t += '<h2>Searching 30+ lenders to find the best loans you qualify for...</h2>';
+      t += '<h2>Finding the best loans for you...</h2>';
       t += '<div class="loading-bar"></div>';
       // t += '<ul class="logos">';
       // t += '<li><img src="" /></li>';
@@ -224,15 +253,17 @@
       cont.append(t);
 
       setTimeout(function(){
+
         $('.loading-bar').addClass('active')},400);
 
       setTimeout(function(){
-        $scope.runLenderApproval();
+        $scope.yourRates();
       }, 4000)
     }
 
     $scope.runLenderApproval = function() {
       var cont = $('.col-md-6');
+
       cont.empty();
       var t;
       t = '<div class="lender-search">';

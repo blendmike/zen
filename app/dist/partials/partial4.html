@@ -51,7 +51,31 @@
           </ul>
 
           <ul class="rates-results col-md-12">
+          <li ng-repeat="appMortgages in appMortgage" class="col-md-12">
+               
+
+                <div class="col-md-2 left">
+                  <img src="img/lender-logos/{{appMortgages.lender}}.jpg" />
+                
+              </div>
+              <div class="col-md-5 mid">
+                <p>
+                   <label><span style="width:{{appMortgages.match}}%;"></span></label>
+                    <span class="match">{{appMortgages.match}}% match</span>
+                </p>
+                 <span class="apr">{{appMortgages.apr}}% APR</span>
+                <span class="mo-pay">${{appMortgages.mopayments}}/mo</span>
+                <span class="mo-type">{{appMortgages.type}}</span>
+                <span class="mo-fees">${{appMortgages.fees}} in fees</span>
+              </div>
+              <div class="col-md-3 right">
+                <button class="view-rate" ng-click="overlay();">View</button>
+                <a href="javascript:void(0)" class="ctl" ng-click="overlay('small');">Close this loan</a>
+              </div>
+             
+                </li>
             <li class="col-md-12">
+
               <div class="col-md-4 left">
                 <p>
                   <img src="img/lender-logos/citi.jpg" />
@@ -68,7 +92,7 @@
               </div>
               <div class="col-md-3 right">
                 <button class="view-rate" ng-click="overlay();">View</button>
-                <a href="#" class="ctl">Close this loan</a>
+                <a href="javascript:void(0)" class="ctl" ng-click="overlay('small');">Close this loan</a>
               </div>
 
             </li>
@@ -89,7 +113,7 @@
               </div>
               <div class="col-md-3 right">
                 <button class="view-rate" ng-click="overlay();">View</button>
-                <a href="#" class="ctl">Close this loan</a>
+                <a href="javascript:void(0)" class="ctl" ng-click="overlay('small');">Close this loan</a>
               </div>
 
             </li>
@@ -110,7 +134,7 @@
               </div>
               <div class="col-md-3 right">
                 <button class="view-rate" ng-click="overlay();">View</button>
-                <a href="#" class="ctl">Close this loan</a>
+                <a href="javascript:void(0)" class="ctl" ng-click="overlay('small');">Close this loan</a>
               </div>
 
             </li>
@@ -131,7 +155,7 @@
               </div>
               <div class="col-md-3 right">
                 <button class="view-rate" ng-click="overlay();">View</button>
-                <a href="#" class="ctl">Close this loan</a>
+                <a href="javascript:void(0)" class="ctl" ng-click="overlay('small');">Close this loan</a>
               </div>
 
             </li>
@@ -152,7 +176,7 @@
               </div>
               <div class="col-md-3 right">
                 <button class="view-rate" ng-click="overlay();">View</button>
-                <a href="#" class="ctl">Close this loan</a>
+                <a href="javascript:void(0)" class="ctl" ng-click="overlay('small');">Close this loan</a>
               </div>
 
             </li>
@@ -160,7 +184,7 @@
     </div>
 
 </div>
-
+<img class="mortech" src="../img/mortech.png" />
 </div>
 
 
@@ -174,10 +198,14 @@
     <div class="overlay-bg1" ng-click="overlay()"></div>
     <div class="overlay-bg2" ng-click="overlay()"></div>
     <div class="overlay-content">
-        
                  <div ng-include="'partials/partial5.html'"></div>
-
-        
+    </div>
+    <div class="overlay-content overlay-small">
+                 <div ng-include="'partials/partial6.html'"></div>
     </div>
 </div>
    
+  
+    
+
+

@@ -10,7 +10,7 @@
   margin-top: 100px;
   background: #F0F3F4;
   font-family: 'Whitney-BookSC';
-  overflow: hidden;
+  overflow: hidden !important;
 }
 .application-start body.lender {
   overflow: visible;
@@ -1522,6 +1522,13 @@
 .left-nav ul li.paystubs.current {
   background: #fff url(../img/icons/active/paystubs-active.png) no-repeat 17px center !important;
 }
+.left-nav ul li.gettingtoknowyou {
+  background: url(../img/icons/gettingtoknowyou.png) no-repeat 10% center;
+}
+.left-nav ul li.gettingtoknowyou.current {
+  background: #fff url(../img/icons/active/gettingtoknowyou-large.svg) no-repeat 22px center;
+  background-size: 15%;
+}
 .left-nav ul li.creditreport {
   background: url(../img/icons/credit-report.png) no-repeat 10% center;
 }
@@ -1926,6 +1933,9 @@ nav img {
 
 .lender-search {
   text-align: center;
+  margin-left: 200px;
+  position: fixed;
+  width: 562px;
 }
 .lender-search h2 {
   width: 70%;
@@ -1993,6 +2003,11 @@ nav img {
   width: 22px;
   margin-top: -5px;
   height: 22px;
+}
+.cur-mor-rates .mortech {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
 .cur-mor-rates .ui-corner-all {
   border-radius: 0;
@@ -2152,6 +2167,7 @@ nav img {
   padding: 0;
   margin-left: 10%;
   height: 500px;
+  position: relative;
   overflow-y: scroll;
 }
 .cur-mor-rates .rates-results li {
@@ -2167,8 +2183,9 @@ nav img {
   background: none;
 }
 .cur-mor-rates .rates-results li div p {
-  position: absolute;
-  left: 0;
+  width: 100%;
+  float: left;
+  margin-bottom: 0px;
 }
 .cur-mor-rates .rates-results li div p img {
   width: 100%;
@@ -2176,12 +2193,33 @@ nav img {
 .cur-mor-rates .rates-results li div img {
   width: 80%;
 }
-.cur-mor-rates .rates-results li div.left {
-  padding-left: 80px;
-}
 .cur-mor-rates .rates-results li div.mid {
-  padding-left: 40px;
   padding-top: 10px;
+}
+.cur-mor-rates .rates-results li div.mid .match {
+  margin-top: 5px;
+  font-size: 13px;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+.cur-mor-rates .rates-results li div.mid label {
+  float: left;
+  margin-top: 10px;
+  width: 35%;
+  height: 12px;
+  border-radius: 4px;
+  border: #BFBFBF 1px solid;
+  margin-left: 0px;
+}
+.cur-mor-rates .rates-results li div.mid label span {
+  height: 10px;
+  background: #34BF39;
+  border-radius: 3px 0 0 3px;
+  border-bottom: none;
+  margin-left: 0;
+}
+.cur-mor-rates .rates-results li div.mid label span {
+  float: left;
 }
 .cur-mor-rates .rates-results li div.right button {
   margin-top: 35px;
@@ -2198,7 +2236,6 @@ nav img {
 }
 .cur-mor-rates .rates-results li div span {
   float: left;
-  width: 100%;
 }
 .cur-mor-rates .rates-results li div .bank-name {
   color: #4A90E2;
@@ -2212,11 +2249,47 @@ nav img {
   color: #4A5E66;
   font-size: 13px;
 }
-.cur-mor-rates .rates-results li div .apr {
+.cur-mor-rates .rates-results li div .apr, .cur-mor-rates .rates-results li div .mo-pay {
   font-size: 28px;
 }
 .cur-mor-rates .rates-results li div .ratings {
   margin-top: 10px;
+}
+.cur-mor-rates .rates-results li div .mo-pay {
+  float: right;
+}
+.cur-mor-rates .rates-results li div .mo-type, .cur-mor-rates .rates-results li div .mo-fees, .cur-mor-rates .rates-results li div .mo-rate {
+  font-size: 15px;
+}
+.cur-mor-rates .rates-results li div .mo-fees, .cur-mor-rates .rates-results li div .mo-rate {
+  margin-left: 10px;
+}
+.cur-mor-rates .rates-results li div .mo-fees:before, .cur-mor-rates .rates-results li div .mo-rate:before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #4A5E66;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.cur-mor-rates .rates-results .tool-tip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  z-index: 99999;
+  opacity: 0;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  cursor: pointer;
+}
+.cur-mor-rates .rates-results .tool-tip.on {
+  opacity: 1;
 }
 .cur-mor-rates .rates-results button {
   border: none;
@@ -2400,6 +2473,116 @@ nav img {
 
 .zen-app {
   background: #FCFEFF !important;
+}
+.zen-app .reco-cont {
+  opacity: 0;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.zen-app .reco-cont.on {
+  opacity: 1;
+}
+.zen-app .filter-mortgages {
+  font-family: "Gotham-Book", sans-serif;
+  float: left;
+  position: absolute;
+  height: 50%;
+  bottom: 0;
+  overflow-y: scroll;
+}
+.zen-app .filter-mortgages .grad-overlay {
+  background: rgba(255, 255, 255, 0);
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.84) 52%, rgba(255, 255, 255, 0.86) 53%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(52%, rgba(255, 255, 255, 0.84)), color-stop(53%, rgba(255, 255, 255, 0.86)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.84) 52%, rgba(255, 255, 255, 0.86) 53%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.84) 52%, rgba(255, 255, 255, 0.86) 53%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.84) 52%, rgba(255, 255, 255, 0.86) 53%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.84) 52%, rgba(255, 255, 255, 0.86) 53%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+  width: 21%;
+  height: 25%;
+  bottom: 0;
+  position: fixed;
+}
+.zen-app .filter-mortgages h3 {
+  color: #5F7882;
+  font-size: 14px;
+  border-bottom: #CEDAE0 1px solid;
+  width: 90%;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+}
+.zen-app .filter-mortgages p {
+  float: left;
+  margin: 0 !important;
+  padding: 0;
+  width: 80%;
+}
+.zen-app .filter-mortgages p span {
+  text-decoration: underline;
+  line-height: 13px !important;
+  margin-left: 10px;
+  font-size: 11px !important;
+}
+.zen-app .filter-mortgages p label {
+  float: left;
+  width: 35%;
+  height: 12px;
+  border-radius: 4px;
+  border: #BFBFBF 1px solid;
+  margin-left: 10px;
+}
+.zen-app .filter-mortgages p label span {
+  height: 10px;
+  background: #34BF39;
+  border-radius: 3px 0 0 3px;
+  border-bottom: none;
+  margin-left: 0;
+}
+.zen-app .filter-mortgages li {
+  list-style: none;
+  border-bottom: #CEDAE0 1px solid;
+  width: 90%;
+  float: left;
+  padding: 20px 5px 15px 5px;
+}
+.zen-app .filter-mortgages img {
+  float: left;
+  width: 30px;
+  border: 1px #ddd solid;
+}
+.zen-app .filter-mortgages span {
+  font-size: 10px !important;
+  color: #4A5E66 !important;
+  float: left;
+}
+.zen-app .filter-mortgages span.mo-pay, .zen-app .filter-mortgages span.apr {
+  font-size: 18px !important;
+  margin-left: 10px;
+  font-family: "Whitney-Book", sans-serif;
+  margin-top: 5px;
+}
+.zen-app .filter-mortgages span.mo-type {
+  margin-left: 40px;
+  margin-top: 5px;
+}
+.zen-app .filter-mortgages span.mo-fees {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.zen-app .filter-mortgages span.mo-fees:before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #4A5E66;
+  display: block;
+  float: left;
+  margin-right: 5px;
+  margin-top: 4px;
 }
 .zen-app .col-md-3 {
   background: #FCFEFF;

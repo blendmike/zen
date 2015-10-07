@@ -8,7 +8,7 @@ body {
     margin-top: 100px;
     background: #F0F3F4;
     font-family: 'Whitney-BookSC';
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 body.lender {
@@ -1632,6 +1632,14 @@ body {
           background:#fff url(../img/icons/active/paystubs-active.png) no-repeat 17px center !important;
         }        
       }
+      &.gettingtoknowyou{
+        background: url(../img/icons/gettingtoknowyou.png) no-repeat 10% center;
+        &.current{
+          background:#fff url(../img/icons/active/gettingtoknowyou-large.svg) no-repeat 22px center;
+                    background-size:15%;
+
+        }        
+      }
       &.creditreport{
         background: url(../img/icons/credit-report.png) no-repeat 10% center;
 
@@ -2028,6 +2036,9 @@ body {
 
     .lender-search{
       text-align: center;
+    margin-left: 200px;
+    position: fixed;
+    width: 562px;
       h2{
         width:70%;
         margin:0 auto;
@@ -2101,6 +2112,12 @@ body {
     width:22px;
     margin-top:-5px;
     height:22px;
+  }
+  .mortech{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+
   }
   .ui-corner-all{
     border-radius:0;
@@ -2271,6 +2288,7 @@ body {
     padding:0;
     margin-left:10%;
     height:500px;
+    position:relative;
     overflow-y: scroll;
     li{
       background:#fff;
@@ -2283,8 +2301,9 @@ body {
         padding:0;
         background:none;
       p{
-        position:absolute;
-        left:0;
+        width:100%;
+        float: left;
+        margin-bottom:0px;
         img{
           width:100%;
         }
@@ -2293,11 +2312,35 @@ body {
         width:80%;
       }
       &.left{
-        padding-left:80px;
+        // padding-left:80px;
       }
       &.mid{
-        padding-left:40px;
+        .match{
+          margin-top:5px;
+          font-size:13px;
+          text-decoration: underline;
+          margin-left:10px;
+        }
         padding-top:10px;
+        label{
+        float:left;
+        margin-top:10px;
+        width:35%;
+        height:12px;
+        border-radius:4px;
+        border:#BFBFBF 1px solid;
+        margin-left:0px;
+        span{
+          height:10px;
+          background:#34BF39;
+          border-radius:3px 0 0 3px;
+          border-bottom:none;
+          margin-left:0;
+        }
+        span{
+          float:left;
+        }
+      }
       }
       &.right{
         button{
@@ -2316,7 +2359,6 @@ body {
       }
       span{
         float:left;
-        width:100%;
       }
       .bank-name{
         color:$brand-primary;
@@ -2330,15 +2372,57 @@ body {
         color:#4A5E66;
         font-size:13px;
       }
-      .apr{
+      .apr, .mo-pay{
         font-size:28px;
       }
       .ratings{
         margin-top:10px;
       }
+      .mo-pay{
+        float: right;
+      }
+      .mo-type, .mo-fees, .mo-rate{
+        font-size:15px;
+        
+      }
+
+      .mo-fees, .mo-rate{
+        margin-left:10px;
+        &:before{
+            content: '';
+            width:5px;
+            height:5px;
+            border-radius:50%;
+            background:#4A5E66;
+            display: block;
+            float:left;
+            margin-right:10px;
+            margin-top:10px;
+          }
+      }
 
       }
+
     }
+
+       .tool-tip{
+        position:fixed;
+        top:0;
+        left:0;
+        width:auto;
+        height:auto;
+        z-index: 99999;
+        opacity: 0;
+         transition: all ease 0.5s;
+          -webkit-transition: all ease 0.5s;
+          -moz-transition: all ease 0.5s;
+          cursor: pointer;
+      }
+
+      .tool-tip.on{
+        opacity: 1;
+      }
+
     button{
         border:none;
         float: right;
@@ -2548,6 +2632,119 @@ body {
 
 
 .zen-app{
+  .reco-cont{
+    opacity: 0;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    &.on{
+      opacity: 1;
+    }
+  }
+  .filter-mortgages{
+    font-family: $gotham;
+    float: left;
+    position: absolute;
+    height: 50%;
+    bottom: 0;
+    overflow-y: scroll;
+    .grad-overlay{
+background: rgba(255,255,255,0);
+background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.84) 52%, rgba(255,255,255,0.86) 53%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(52%, rgba(255,255,255,0.84)), color-stop(53%, rgba(255,255,255,0.86)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.84) 52%, rgba(255,255,255,0.86) 53%);
+background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.84) 52%, rgba(255,255,255,0.86) 53%);
+background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.84) 52%, rgba(255,255,255,0.86) 53%);
+background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.84) 52%, rgba(255,255,255,0.86) 53%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );        
+        width:21%;
+        height:25%;
+        bottom:0;
+        position:fixed;
+    }
+    h3{
+      color:#5F7882;
+      font-size:14px;
+      border-bottom:#CEDAE0 1px solid;
+      width:90%;
+      padding-bottom:15px;
+      margin-bottom:0;
+    }
+    p{
+      float:left;
+      margin:0 !important;
+      padding:0;
+      width:80%;
+      span{
+       text-decoration: underline;
+       line-height:13px !important;
+       margin-left:10px;
+       font-size:11px !important;
+      }
+      label{
+        float:left;
+        width:35%;
+        height:12px;
+        border-radius:4px;
+        border:#BFBFBF 1px solid;
+        margin-left:10px;
+        span{
+          height:10px;
+          background:#34BF39;
+          border-radius:3px 0 0 3px;
+          border-bottom:none;
+          margin-left:0;
+        }
+      }
+    
+    }
+    li{
+      list-style: none;
+      border-bottom:#CEDAE0 1px solid;
+      width:90%;
+      float:left;
+      padding:20px 5px 15px 5px;
+    }
+    img{
+      float:left;
+      width:30px;
+      border:1px #ddd solid;
+    }
+    span{
+      font-size:10px !important;
+      color:#4A5E66 !important;
+      float:left;
+        &.mo-pay, &.apr
+        {
+          font-size:18px !important;
+          margin-left:10px;
+          font-family: $whitney;
+          margin-top:5px;
+        }
+        &.mo-type{
+          margin-left:40px;
+          margin-top:5px;
+        }
+        &.mo-fees{
+          margin-top:5px;
+          margin-left:5px;
+          &:before{
+            content: '';
+            width:5px;
+            height:5px;
+            border-radius:50%;
+            background:#4A5E66;
+            display: block;
+            float:left;
+            margin-right:5px;
+            margin-top:4px;
+          }
+        }
+
+    }
+  }
   background:#FCFEFF !important;
   .col-md-3{
       .questions{
@@ -2642,7 +2839,10 @@ body {
   .col-md-6{
     background:#FCFEFF !important;
   }
+
 }
+
+
 
 
 
